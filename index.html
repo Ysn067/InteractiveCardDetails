@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive card details form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque&family=Kanit:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,600;0,700;1,600;1,700&family=Roboto:ital,wght@0,400;0,500;0,900;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="body-div">
+      <img src="images/bg-main-mobile.png" alt="background" id="bgphone" />
+      <img src="images/bg-main-desktop.png" alt="background" id="bgplan" />
+      <div class="front-card-div">
+        <div class="content-div">
+          <img src="images/bg-card-front.png" class="card-front" />
+          <img src="images/card-logo.svg" alt="" class="front-svg" />
+          <div class="front-number">
+            <!-- card number -->
+            <span id="card-number">0000 0000 0000 0000</span>
+          </div>
+
+          <div class="card-info-footer">
+            <p class="name">Name</p>
+            <div class="date-div">
+              <p class="date-month">00M</p>
+              /
+              <p class="date-year">00Y</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="back-card-div">
+        <div class="content-div">
+          <img src="images/bg-card-back.png" class="card-back" />
+          <div class="cvc-div">
+            <p class="card-cvc">000</p>
+          </div>
+        </div>
+      </div>
+      <!-- PERSONEL INFO -->
+      <div class="personel-content">
+        <div class="personel-info">
+          <!--  -->
+          <p class="text-title">CARDHOLDER NAME</p>
+          <input type="text" class="card-name" placeholder="Name" />
+          <p class="error-name" id="error">
+            <!--  -->
+          </p>
+
+          <p class="text-title second-title">CARD NUMBER</p>
+          <input
+            type="text"
+            class="card-number-text"
+            maxlength="19"
+            id="cardNumber"
+            placeholder="Card Number"
+          />
+          <p class="error-number" id="error"></p>
+        </div>
+        <div class="personel-info-footer">
+          <div class="date">
+            <!--  -->
+            <span>EXP. DATE (MM/YY)</span>
+            <br />
+            <div class="text-content-info">
+              <input
+                type="text"
+                class="text-month"
+                maxlength="2"
+                placeholder="MM"
+              />
+
+              <input
+                type="text"
+                class="text-year"
+                maxlength="2"
+                placeholder="YY"
+              />
+            </div>
+            <p class="error-date" id="error"></p>
+          </div>
+          <div class="cvc-info">
+            <span>CVC</span> <br />
+            <input type="text" class="cvc" maxlength="3" placeholder="000" />
+            <p class="error-cvc" id="error"></p>
+          </div>
+        </div>
+        <button type="submit" class="submit">Confirm</button>
+      </div>
+    </div>
+
+    <div class="tesekkur">
+      <img src="images/icon-complete.svg" alt="" />
+      <h1>Thank You!</h1>
+      <p>Thank you for choosing us. Your payment has been received.</p>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

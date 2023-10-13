@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.8rem;
+    font-family: "Sans Serif", Kanit;
+    font-weight: 350;
+    letter-spacing: 1px;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.body-div{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+#bgplan{
+    background-repeat: no-repeat;
+    height: 100%;
+    position: absolute;
+    z-index: -999;
+}
+#bgphone{
+    display: none;
+}
+
+.front-card-div{
+    position: absolute;
+    margin-top: 25vh;
+    margin-left: 20vh;
+}
+
+.back-card-div{
+    position: absolute;
+    margin-top: 55vh;
+    margin-left: 35vh;
+}
+.content-div{
+    position: relative;
+    width: 45rem;
+}
+.card-front,
+.card-back{
+    position:absolute;
+    z-index:-99;
+    width: 45rem;
+    height: 24.5rem;
+}
+.front-svg{
+    padding: 2.5rem;
+
+}
+.front-number{
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    padding-left: 2.5rem;
+    margin-top: 3rem;
+    cursor: text;
+}
+.front-number>#card-number{
+    font-size: 3rem;
+    color: white;
+}
+.card-info-footer{
+    position: absolute;
+    margin-top: 7rem;
+    padding: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.name{
+    margin-left: 1rem;
+    color: white;
+}
+.date-div{
+    color: white;
+    display: flex;
+}
+
+.cvc-div{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    align-items: center;
+    min-height: 25vh;    
+}
+.card-cvc{
+    position: absolute;
+    right: 0;
+    width: 10rem;
+}
+
+.personel-info>input[type=text]{
+    border-radius: 0.8rem;
+    outline: 0;
+    border: 1px solid black;
+    padding-left: 1rem;
+    height: 4rem;
+    font-size: 2rem;
+    transition: 250ms;
+    margin-top: 1rem;
+    width: 35rem;
+}
+
+input[type=text]{
+    border-radius: 0.8rem;
+    outline: 0;
+    border: 1px solid black;
+    padding-left: 1rem;
+    height: 4rem;
+    font-size: 2rem;
+    transition: 250ms;
+}
+input[type=text]:hover{
+    border: solid 1px rgb(0, 153, 0);
+    cursor: pointer;
+}
+input[type=text]:focus{
+    border: solid 1px rgb(110, 110, 245);
+}
+.personel-content{
+    margin-left: 100rem;
+    margin-top: 30rem;
+    position: absolute;
+    width: auto;
+    height: auto; 
+}
+.text-title{
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.second-title{
+    margin-top: 2rem;
+}
+#error{
+    display: flex;
+    justify-content: center;
+    color: rgb(252, 59, 59);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.personel-info-footer{
+    margin-top: 2.5rem;
+    display: flex;
+}
+.personel-info-footer>.date>span{
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+.text-content-info{
+    display: flex;
+}
+.date{
+    width: 50%;
+    height: 100px;
+}
+.text-month,.text-year{
+    width: 7.5rem;
+}
+.text-year{
+    margin-left: 1rem;
+}
+.error-date{
+    display: block;
+    float: left;
+    margin-left: 0.3rem;
+}
+.cvc{
+    width: 17.5rem;
+}
+.cvc-info>span{
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+.submit{
+    width: 100%;
+    height: 5rem;
+    background: rgb(0, 0, 64);
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    transition: 250ms ease-in-out;
+}
+.submit:hover{
+    cursor: pointer;
+    background: rgb(1, 1, 210);
+}
+.submit:active{
+    background: black;
+}
+.tesekkur{
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    margin-left:88vh;
+    margin-top: 30vh;
+    width: 35%;
+    height: 35%;
+    border-radius: 2rem;
+    display: none;
+}
+
+.tesekkur>img{
+    margin-bottom: 5rem;
+}
+.tesekkur>h1{
+    margin-top: -2rem;
+    font-size: 3.4rem;
+}
+.tesekkur>p{
+    margin-top: 3rem;
+}
+.tesekkur>a>button{
+    margin-top: 5rem;
+    background: black;
+    color: white;
+    width: 25rem;
+    height: 5rem;
+    border: none;
+    border-radius: 1rem;
+    transition: 250ms;
+    cursor: pointer;
+}
+@media only screen and (max-width:768px) {
+    body{
+        position: relative;
+    }
+    #bgplan{
+        display: none;
+    }
+    #bgphone{
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        display: block;
+        width: 100%;
+        height: 500px;
+    }
+    .front-card-div{
+        margin-top: 5vh;
+        margin-left: 15vw;
+        z-index: 99;
+    }
+    .back-card-div{
+        margin-top: 30vh;
+        z-index: 99;
+        position: absolute;
+        margin-left: 20vw;
+    }
+   .personel-content{
+    margin-left: 25vw;
+    margin-top: 60vh;
+   }
+   .tesekkur{
+    margin-left: 35vw;
+    margin-top: 60vh;
+   }
+}
